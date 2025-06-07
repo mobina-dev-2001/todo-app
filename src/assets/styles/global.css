@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
+@plugin "daisyui";
+@plugin 'tailwind-scrollbar';
+
+@theme {
+  --color-scheme: light dark;
+
+  --color-malibu: hsl(192, 100%, 67%);
+  --color-dodger-blue: hsl(220, 98%, 61%);
+  --color-comet: hsl(235, 16%, 43%);
+  --color-cinder: hsl(235, 21%, 11%);
+  --color-ebony-clay: hsl(235, 24%, 19%);
+  --color-mulled-wine: hsl(235, 19%, 35%);
+  --color-trout: hsl(233, 14%, 35%);
+  --color-bright-gray: hsl(237, 14%, 26%);
+  --color-waterloo: hsl(234, 11%, 52%);
+  --color-manatee: hsl(236, 9%, 61%);
+  --color-periwinkle-gray: hsl(234, 39%, 85%);
+  --color-mischka: hsl(233, 11%, 84%);
+  --color-snuff: hsl(236, 33%, 92%);
+  --color-heliotrope: hsl(280, 87%, 65%);
+  --color-alabaster: hsl(0, 0%, 98%);
+
+  --font-josefin: 'Josefin Sans', sans-serif;
+}
+
+@layer components {
+  .body-typography {
+    @apply text-mulled-wine dark:text-periwinkle-gray font-josefin text-[clamp(.75rem,2vw,1.125rem)] tracking-[-.25px] max-sm:tracking-[-.17px];
+  }
+  .main-title-typography {
+    @apply text-white text-[clamp(1.688rem,3vw,2.5rem)] font-bold uppercase tracking-[15px] max-sm:tracking-[10px];
+  }
+  .form-input-typography {
+    @apply text-bright-gray dark:text-periwinkle-gray placeholder:text-manatee placeholder:dark:text-waterloo;
+  }
+  .bottom-panel-typography {
+    @apply text-manatee dark:text-comet text-[clamp(.75rem,1vw,.875rem)] tracking-[-.19px] max-sm:tracking-[-.17px];
+  }
+  .filter-tablist-typography {
+    @apply text-manatee dark:text-comet text-sm font-bold tracking-[-.19px] *:hover:text-mulled-wine *:dark:hover:text-snuff *:aria-selected:text-dodger-blue *:aria-selected:hover:text-dodger-blue;
+  }
+  .border-color {
+    @apply border-snuff dark:border-bright-gray;
+  }
+  .tooltip-styles {
+    @apply tooltip tooltip-bottom before:bg-gradient-to-br before:from-malibu before:to-heliotrope before:text-xs before:text-shadow-md after:bg-transparent;
+  }
+}
