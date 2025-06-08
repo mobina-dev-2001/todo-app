@@ -49,3 +49,7 @@
     @apply tooltip tooltip-bottom before:bg-gradient-to-br before:from-malibu before:to-heliotrope before:text-xs before:text-shadow-md after:bg-transparent;
   }
 }
+
+html {
+  scrollbar-gutter: unset;
+}

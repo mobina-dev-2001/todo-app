@@ -8,7 +8,8 @@ export default function ConfirmationModal({ todo }) {
   const handleDeleteTask = () => { playSound("deleteTask"); dispatch(deleteTodo(todo.id)) };
 
   return (
-    <dialog className="modal text-mulled-wine dark:text-periwinkle-gray" id={modalId} aria-labelledby={`modal-title-${todo.id}`} aria-modal="true">
+    <dialog className="modal text-mulled-wine dark:text-periwinkle-gray"
+     id={modalId} aria-labelledby={`modal-title-${todo.id}`} aria-modal="true">
       <div className="modal-box grid place-items-center max-w-[22rem] bg-alabaster dark:bg-cinder border-1 border-color text-center">
         <div>
           <h3 id={`modal-title-${todo.id}`}>Are you sure?</h3>
@@ -17,10 +18,10 @@ export default function ConfirmationModal({ todo }) {
 
         <div className="modal-action">
           <form className="flex gap-5 *:border-none" method="dialog">
-            <button className="btn bg-snuff dark:bg-ebony-clay text-mulled-wine dark:text-periwinkle-gray" type="button"
+            <button className="btn bg-snuff dark:bg-ebony-clay text-mulled-wine dark:text-periwinkle-gray" type="submit"
             onClick={() => playSound("modalPopup")}>Close</button>
 
-            <button className="btn bg-red-600 dark:bg-red-900 text-white dark:text-periwinkle-gray" type="button"
+            <button className="btn bg-red-600 dark:bg-red-900 text-white dark:text-periwinkle-gray" type="submit"
             onClick={handleDeleteTask}>Delete</button>
           </form>
         </div>
