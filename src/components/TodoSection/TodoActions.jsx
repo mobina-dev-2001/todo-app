@@ -33,7 +33,7 @@ export default function TodoActions({ todo, editingId, setEditingId, editValue, 
   return (
     <div className="flex gap-[clamp(.5rem,2vw,1.25rem)] *:cursor-pointer *:opacity-0 *:transition-opacity *:duration-250 *:ease-in-out *:group-hover:opacity-100 *:group-focus-within:opacity-100">
 
-      <button className="tooltip-styles *:w-[clamp(.75rem,2vw,1.125rem)] *:text-mulled-wine/75 *:dark:text-comet *:transition-colors *:duration-150 *:ease-in-out *:hover:text-mulled-wine *:hover:dark:text-periwinkle-gray"
+      <button className="tooltip-styles *:w-[clamp(.75rem,2vw,1.125rem)] *:text-mulled-wine/75 *:dark:text-comet *:transition-colors *:duration-150 *:ease-in-out *:hover:text-mulled-wine *:hover:dark:text-periwinkle-gray" type="button"
         onMouseDown={(e) => e.preventDefault()} onClick={handleClickEditBtn} 
         role="switch" aria-label={editingId === todo.id ? "Save changes" : "Edit task"} aria-pressed={editingId === todo.id} aria-controls={`todo-${todo.id}`} data-tip={editingId === todo.id ? "save" : "edit"}>
 
@@ -50,7 +50,7 @@ export default function TodoActions({ todo, editingId, setEditingId, editValue, 
         
       </button>
 
-      <button className="tooltip-styles *:w-[clamp(.75rem,2vw,1.125rem)] *:text-mulled-wine/75 *:dark:text-comet *:transition-colors *:duration-150 *:ease-in-out *:hover:text-mulled-wine *:hover:dark:text-periwinkle-gray"
+      <button className="tooltip-styles *:w-[clamp(.75rem,2vw,1.125rem)] *:text-mulled-wine/75 *:dark:text-comet *:transition-colors *:duration-150 *:ease-in-out *:hover:text-mulled-wine *:hover:dark:text-periwinkle-gray" type="button"
         onClick={handleShowConfirm} aria-label={`Delete task: ${todo.label}`} data-tip="delete">
         <svg aria-hidden="true" focusable="false" width="18px" height="18px" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
           <path fill="currentColor" fillRule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z" />

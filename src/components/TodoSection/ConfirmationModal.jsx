@@ -17,8 +17,11 @@ export default function ConfirmationModal({ todo }) {
 
         <div className="modal-action">
           <form className="flex gap-5 *:border-none" method="dialog">
-            <button className="btn bg-snuff dark:bg-ebony-clay text-mulled-wine dark:text-periwinkle-gray" onClick={() => playSound("modalPopup")}>Close</button>
-            <button className="btn bg-red-600 dark:bg-red-900 text-white dark:text-periwinkle-gray" onClick={handleDeleteTask}>Delete</button>
+            <button className="btn bg-snuff dark:bg-ebony-clay text-mulled-wine dark:text-periwinkle-gray" type="button"
+            onClick={() => playSound("modalPopup")}>Close</button>
+
+            <button className="btn bg-red-600 dark:bg-red-900 text-white dark:text-periwinkle-gray" type="button"
+            onClick={handleDeleteTask}>Delete</button>
           </form>
         </div>
       </div>

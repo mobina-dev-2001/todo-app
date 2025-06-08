@@ -43,7 +43,7 @@ export default function TodosContainer() {
                 {filteredTodos.map((todo) => (
                   <li key={todo.id}>
                     <SortableTodos todo={todo} />
-                    <div className="border-b-1 border-color"></div>
+                    <hr className="border-color" />
                   </li>
                 ))}
                 </AnimatePresence>
